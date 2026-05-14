@@ -1,0 +1,10 @@
+data/raw/
+data/*.duckdb
+dbt_ytmusic/target/
+dbt_ytmusic/logs/
+dbt_ytmusic/dbt_packages/
+__pycache__/
+*.pyc
+.env
+venv/
+.DS_Store

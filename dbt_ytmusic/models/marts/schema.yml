@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_channels
+    columns:
+      - name: channel_id
+        tests: [unique, not_null]
+      - name: channel_name
+        tests: [not_null]
+
+  - name: dim_videos
+    columns:
+      - name: video_id_dim
+        tests: [unique, not_null]
+
+  - name: dim_time
+    columns:
+      - name: time_id
+        tests: [unique, not_null]
+
+  - name: fact_watches
+    columns:
+      - name: watch_id
+        tests: [unique, not_null]
+      - name: channel_name
+        tests: [not_null]
+      - name: watch_sec
+        tests: [not_null]
+
+  - name: mart_channel_summary
+    columns:
+      - name: channel_name
+        tests: [unique, not_null]
+
+  - name: mart_monthly_trends
+    columns:
+      - name: year_month
+        tests: [unique, not_null]

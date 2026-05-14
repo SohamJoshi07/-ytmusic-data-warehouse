@@ -1,0 +1,7 @@
+dbt_ytmusic:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../data/ytmusic.duckdb"
+      threads: 4
